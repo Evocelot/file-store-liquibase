@@ -1,6 +1,8 @@
 # FileStore - liquibase
 
-...
+Liquibase project for designing the database schema of the [file-store](https://github.com/Evocelot/file-store) application.
+
+The starter project: liquibase-base is an open-source starter project that provides a general solution for initiating Liquibase-based projects. For more details: [Evocelot/liquibase-base](https://github.com/Evocelot/liquibase-base)
 
 ## Technologies used
 
