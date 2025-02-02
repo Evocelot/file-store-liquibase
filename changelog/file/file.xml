@@ -2,14 +2,27 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
-    <changeSet id="SAMPLE-CREATE_TABLE" author="mark.danisovszky">
-        <createTable tableName="SAMPLE">
+    <changeSet id="FILE-CREATE_TABLE" author="mark.danisovszky">
+        <createTable tableName="FILE">
             <column name="ID" type="VARCHAR(36)" remarks="The primary key">
-                <constraints primaryKey="true" primaryKeyName="PK-SAMPLE-X__ID" nullable="false"/>
+                <constraints primaryKey="true" primaryKeyName="PK-FILE-X__ID" nullable="false"/>
             </column>
 
-            <column name="SAMPLE_VALUE" type="VARCHAR(30)"/>
-            <column name="SAMPLE_DATE" type="TIMESTAMP"/>
+            <column name="name" type="VARCHAR(250)" remarks="The name of the file (used as filename)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="extension" type="VARCHAR(10)" remarks="The extension of the file (e.g., png, jpg, pdf)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="hash" type="VARCHAR(32)" remarks="MD5 hash of the file">
+                <constraints nullable="true"/>
+            </column>
+            <column name="object_id" type="VARCHAR(100)" remarks="ID of the connected entity (internal owner of the file)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="system_id" type="VARCHAR(100)" remarks="File creator system ID">
+                <constraints nullable="true"/>
+            </column>
 
             <column name="INS_DATE" type="TIMESTAMP" remarks="Creation date" defaultValueComputed="CURRENT_TIMESTAMP">
                 <constraints nullable="false"/>
