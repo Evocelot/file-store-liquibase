@@ -76,3 +76,7 @@ make build-liquibase-image
 ```
 
 This command reads the configuration from the `local.env` file, builds the Docker image with the specified settings, and tags it according to the `IMAGE_NAME` and `VERSION` values in the configuration. The resulting image can then be used to run Liquibase containers with your database schema changes.
+
+## Docker Images
+
+The released Docker images for this application are available at: [dockerhub](https://hub.docker.com/repository/docker/evocelot/file-store-liquibase/general)
