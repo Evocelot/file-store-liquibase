@@ -20,7 +20,7 @@ delete-podman-network:
 # Builds the docker image.
 build-liquibase-image:
 	@echo "[>>>] Building the docker image"
-	@podman build -t $(IMAGE_NAME):$(VERSION) .
+	@podman build -t $(IMAGE_NAME):$(VERSION) . -f Dockerfile.prod
 	@echo "[<<<]"
 
 # Starts local mariadb container.
