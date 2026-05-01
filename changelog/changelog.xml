@@ -5,4 +5,5 @@
     <include file="file/file.xml" relativeToChangelogFile="true"/>
     <include file="file/file_password.xml" relativeToChangelogFile="true"/>
     <include file="file/file_size.xml" relativeToChangelogFile="true"/>
+    <include file="file/file_download_counter.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
