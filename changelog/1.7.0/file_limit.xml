@@ -1,0 +1,22 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="FILE-ADD_LABEL" author="mark.danisovszky">
+        <addColumn tableName="FILE">
+            <column name="LABEL" type="VARCHAR(100)" remarks="Label of the file">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="FILE_STORAGE_LIMIT-ADD_USED_DISK_SPACE" author="mark.danisovszky">
+        <addColumn tableName="FILE_STORAGE_LIMIT">
+            <column name="USED_DISK_SPACE" type="BIGINT" defaultValueNumeric="0"
+                    remarks="Currently used disk space in bytes">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+</databaseChangeLog>
